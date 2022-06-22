@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    // write your code here
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+    
+    int[] a = new int[n];
+    for(int i=0; i<n; i++){
+        a[i] = scn.nextInt();
+    }
+    
+    int rows = (1 << n);
+
+    for(int i=0; i<rows; i++){
+        int decimal = i;
+        String str = "";
+        
+        for(int j=0; j<n; j++){
+            int binary = decimal % 2;
+            decimal = decimal / 2;
+            
+            if(binary == 1){
+                str = a[a.length - 1 - j] + "\t" + str;
+            }else{
+                str = "-\t" + str;
+            }
+        }
+        System.out.println(str);
+    }
+    
+ }
+
+}

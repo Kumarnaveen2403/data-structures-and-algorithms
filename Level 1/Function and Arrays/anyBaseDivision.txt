@@ -1,0 +1,82 @@
+
+// Online IDE - Code Editor, Compiler, Interpreter
+
+public class Main
+{
+    public static void main(String[] args) {
+        int n1 = 144;
+        int n2 = 12;
+        
+        int b = 8;
+        
+        anyBaseDivision(b, n1, n2); // n1 > n2
+        
+        //System.out.print(div);
+        
+    }
+    public static void anyBaseDivision(int b, int n1, int n2){ //n1 144 > n2 13
+        
+        int rem = n1;
+        int q = 0;
+        
+        while(n1 >= n2) {
+            rem = getDifference(b, n2, n1 );
+            q++;
+            n1 = rem;
+        }
+        
+        System.out.print("Quotient : " + decimalToAnyBase(q, b) + "\nRemainder : " + rem );
+    }
+    
+    public static int decimalToAnyBase(int n, int b){
+        
+        int sum = 0;
+        int tp = 1;
+        
+        while(n > 0){
+            
+            int d = n % b;
+            n = n / b;
+            
+            sum = sum + d * tp;
+            
+            tp = tp * 10;   
+        }
+        
+        return sum;
+    };
+
+      public static int getDifference(int b, int n1, int n2){//n2 > n1
+       // write your code here
+       int diff = 0;
+       int tp = 1;
+       int carry = 0;
+       
+       while(carry > 0 || n2 > 0 || n1 > 0) {
+           int d1 = n1 % 10;
+           int d2 = n2 % 10;
+           
+           n1 = n1 / 10;
+           n2 = n2 / 10;
+           
+           
+           int d = d2 - carry - d1;
+           
+           if(d < 0){
+               d = d + b;
+               carry = 1;
+           } else {
+               carry = 0;
+           }
+           
+           
+           diff = diff + d * tp;
+           
+           tp = tp * 10;
+       }
+       
+       return diff;
+   }
+  
+    
+}

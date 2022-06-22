@@ -1,0 +1,35 @@
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here  
+        Scanner scn = new Scanner(System.in);
+        
+        int n1 = scn.nextInt();
+        int n2 = scn.nextInt();
+        
+        int rem;
+        int gcd=1;
+        int num1 = n1;
+        int num2 = n2;
+        
+        while(true){
+            rem = num2 % num1;
+            if(rem != 0) {
+                num2 = num1;
+                num1 = rem;
+            } else {
+                gcd = num1;
+                break;
+            }
+        }
+        
+        int lcm = (n1 * n2) / gcd;
+        
+        System.out.print(gcd + "\n" + lcm );
+        
+        
+         
+     }
+    }

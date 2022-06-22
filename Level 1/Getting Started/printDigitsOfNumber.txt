@@ -1,0 +1,28 @@
+import java.util.*;
+    
+    public class Main{
+    
+    public static void main(String[] args) {
+      // write your code here 
+      Scanner scn = new Scanner(System.in);
+      
+      int n = scn.nextInt();
+      
+      int div = 1;
+      int num = n;
+      
+      while(num >=10){
+        num = num / 10;
+        div = div * 10;
+      }
+      
+      num = n;
+      
+      while(div >= 1){
+        System.out.println(num / div);
+        num = num % div;
+        div = div / 10;
+      }
+      
+     }
+    }

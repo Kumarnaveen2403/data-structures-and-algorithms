@@ -1,0 +1,49 @@
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+       
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+        
+        int numOfDig = 0;
+        int num = n;
+        int newNum = 0;
+        
+        while(num>0) {
+            num = num / 10;
+            numOfDig++;
+        }
+        
+        num = n;
+        
+        for(int i=0; i<numOfDig; i++) {
+            if(k>=0) {
+                if(i - k < 0) {
+                newNum = newNum + (num % 10) * 
+                    (int)Math.pow(10, i-k +numOfDig);
+                } else {
+                newNum = newNum + (num % 10) * 
+                    (int)Math.pow(10, i-k );
+                }    
+            } else {
+                 if(i >= numOfDig + k ) {
+                    newNum = newNum + (num % 10) * 
+                        (int)Math.pow(10, i-numOfDig-k);
+                } else {
+                    newNum = newNum + (num % 10) * 
+                    (int)Math.pow(10, i - k);
+            } 
+            }
+            
+            
+            num = num / 10;
+        }
+        
+        
+        System.out.print(newNum);
+        
+    }
+   }

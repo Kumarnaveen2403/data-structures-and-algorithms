@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void solution(String str){
+		// write your code here
+		int n = str.length();
+		
+		//calculating factorial
+		int factorial = 1;
+		for(int i = 1; i <= n; i++){
+			factorial = factorial * i;
+		}
+		
+		for(int i = 0; i < factorial; i++){
+			StringBuilder temp = new StringBuilder(str);
+			int num = i;
+			
+			for(int j = n; j >= 1; j--){
+				int rem = num % j;
+				num = num / j;
+				
+				System.out.print(temp.charAt(rem));
+				temp.delete(rem, rem + 1);
+				
+			}
+			System.out.println();
+		}
+		
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		solution(str);
+	}
+
+}

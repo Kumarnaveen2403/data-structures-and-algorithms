@@ -1,0 +1,144 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+         Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        
+        int[][] twoDArray = new int[n][m];
+        
+        for(int i = 0; i < twoDArray.length; i++){
+            for(int j = 0; j < twoDArray[0].length; j++){
+                twoDArray[i][j] = scn.nextInt();
+            }
+        }
+        
+        int s = scn.nextInt();
+        int r = scn.nextInt();
+        
+		
+		int[] oneDArray = getOneDArray(twoDArray, s);
+        rotate(oneDArray, r);
+		putElementsBack(twoDArray, oneDArray, s);
+		display(twoDArray);
+        
+    }
+	
+	public static int[] getOneDArray(int[][] twoDArray, int s){
+		int rmin = s - 1;
+		int rmax = twoDArray.length - s;
+		int cmin = s - 1;
+		int cmax = twoDArray[0].length - s;
+		
+		int index = 0;
+		
+		int size = 2*(rmax - rmin) + 2*(cmax - cmin);
+		
+		int[] oneDArray = new int[size];
+		
+		for(int i = rmin, j = cmin ; i <= rmax; i++){
+			oneDArray[index] = twoDArray[i][j];
+			index++;
+		}
+		
+		cmin++;
+		
+		for(int i = rmax, j = cmin; j <= cmax; j++){
+			oneDArray[index] = twoDArray[i][j];
+			index++;			
+		}
+		
+		rmax--;
+		
+		for(int i = rmax, j = cmax; i >= rmin; i--){
+			oneDArray[index] = twoDArray[i][j];
+			index++;			
+		}
+		
+		cmax--;
+		
+		for(int i = rmin, j = cmax; j >= cmin; j--){
+			oneDArray[index] = twoDArray[i][j];
+			index++;			
+		}
+		
+		return oneDArray;
+	}
+	
+	public static void rotate(int[] oneDArray, int r){
+	    r = r % oneDArray.length;
+	    
+	    if(r < 0){
+	        r = r + oneDArray.length;
+	    }
+	    
+		int l = oneDArray.length - 1;
+		reverse(oneDArray, 0, l - r);
+		reverse(oneDArray, l - r + 1, l);
+		reverse(oneDArray, 0, l);
+	}
+	
+	public static void reverse(int[] oneDArray, int i, int j){
+		int left = i;
+		int right = j;
+		
+		while(left < right){
+			int temp = oneDArray[left];
+			oneDArray[left] = oneDArray[right];
+			oneDArray[right] = temp;
+			
+			left++;
+			right--;
+		}
+	}
+	
+	public static void putElementsBack(int[][] twoDArray, int[] oneDArray, int s){
+		int rmin = s - 1;
+		int rmax = twoDArray.length - s;
+		int cmin = s - 1;
+		int cmax = twoDArray[0].length - s;
+		
+		int index = 0;
+		
+		for(int i = rmin, j = cmin ; i <= rmax; i++){
+			twoDArray[i][j] = oneDArray[index];
+			index++;
+		}
+		
+		cmin++;
+		
+		for(int i = rmax, j = cmin; j <= cmax; j++){
+			twoDArray[i][j] = oneDArray[index];
+			index++;			
+		}
+		
+		rmax--;
+		
+		for(int i = rmax, j = cmax; i >= rmin; i--){
+			twoDArray[i][j] = oneDArray[index];
+			index++;			
+		}
+		
+		cmax--;
+		
+		for(int i = rmin, j = cmax; j >= cmin; j--){
+			twoDArray[i][j] = oneDArray[index];
+			index++;			
+		}
+		
+	}
+
+    public static void display(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}

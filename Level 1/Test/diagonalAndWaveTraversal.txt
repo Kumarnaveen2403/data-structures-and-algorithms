@@ -1,0 +1,134 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        
+        int[][] arr = new int[n][n];
+        
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        Solution(arr, n);
+        
+    }
+    
+    public static void Solution(int[][] arr, int n){
+        int i, j;
+        int nod = 2 * n - 1;
+        int elements = 0;
+        
+        for(int diag = 1; diag < 2 * n; diag++){
+            if(diag <= n ){
+                elements++;
+                if(diag % 2 == 0){
+                    i = n - 1;
+                    j = diag - 1;
+                } else {
+                    i = n - diag;
+                    j = 0;
+                }
+            } else {
+                elements--;
+                if(diag % 2 == 0){
+                    i = nod - diag;
+                    j = n - 1;
+                } else {
+                    i = 0;
+                    j = diag - n;
+                }
+            }
+            
+            for(int k = 1; k <= elements; k++){
+                if(diag % 2 == 0){
+                    System.out.println(arr[i][j]);
+                    i--;
+                    j--;
+                } else {
+                    System.out.println(arr[i][j]);
+                    i++;
+                    j++;
+                }
+            }
+            
+            
+            
+        }
+        
+        
+    }
+}
+
+//////////////////////////////////////////////////////////////
+////////////////Sir's method//////////////////////////////////
+
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[][] arr = new int[n][n];
+        for(int i = 0 ; i < n; i++){
+            for(int j = 0; j < n; j++){
+                arr[i][j] = scn.nextInt();
+            }
+        }
+        
+        for(int diag = 0; diag < 2 * n; diag++){
+            int i;
+            int j;
+            if(diag < n - 1){
+                if(diag % 2 == 0){
+                    i = n - 1 - diag;
+                    j = 0;
+                }else{
+                    i = n - 1;
+                    j = diag;
+                }
+            }else if(diag >= n){
+                if(diag % 2 == 0){
+                    i = 0;
+                    j = diag - (n - 1);
+                }else{
+                    i = 2 * n - 2 - diag;
+                    j = n - 1;
+                }
+            }else{
+                if(n % 2 == 0){
+                    i = n - 1;
+                    j = n - 1;
+                }else{
+                    i = 0;
+                    j = 0;
+                }
+            }
+            
+            if(diag % 2 == 0){
+                while(i < n && j < n){
+                    System.out.println(arr[i][j]);
+                    i++;
+                    j++;
+                }
+            }else{
+                while(i >= 0 && j >= 0){
+                    System.out.println(arr[i][j]);
+                    i--;
+                    j--;
+                }
+            }
+        }
+        
+        
+    }
+}

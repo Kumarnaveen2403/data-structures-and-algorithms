@@ -1,0 +1,188 @@
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int b = scn.nextInt();
+    int n1 = scn.nextInt();
+    int n2 = scn.nextInt();
+
+    int d = getProduct(b, n1, n2);
+    System.out.println(d);
+ }
+
+public static int getSum(int b, int n1, int n2){
+       // write ur code here
+       int num;
+       int nod=0;
+       int carry = 0;
+       int t = 10;
+       int temp;
+       int sum = 0;
+       
+       if(n1 >= n2) {
+           num = n1;
+       } else {
+           num = n2;
+       }
+       
+       while(num > 0) {
+           nod++;
+           num = num / 10;
+       }
+       
+        for(int i=1; i<=nod+1; i++){
+            temp = n1 % 10 + n2 % 10 + carry;
+            n1 = n1 / 10;
+            n2 = n2 / 10;
+            
+            sum = sum + (temp % b) * t / 10;
+            carry = temp / b;
+            t = t* 10;
+        }
+        
+        return sum;
+       
+   }
+   
+ public static int getProduct(int b, int n1, int n2){
+     // write your code here 
+     
+     int tp = 1;
+     int tp2 = 1;
+     int sum = 0;
+     int carry = 0;
+     
+    while(n1 > 0 ){
+        int d1 = n1 % 10;
+        n1 = n1 / 10;
+        tp = tp2;
+        int num = n2;
+
+        while(num > 0 || carry > 0){
+            int d2 = num % 10;
+            num = num / 10;
+            
+            int temp = d1 * d2 + carry ;
+            sum = getSum( b, sum ,( temp % b ) * tp);
+            carry = temp / b;
+            
+            tp = tp * 10;
+        }
+        tp2 = tp2 * 10;
+        
+    }
+     
+    return sum;
+     
+ }
+
+}
+
+
+//new method
+
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int b = scn.nextInt();
+    int n1 = scn.nextInt();
+    int n2 = scn.nextInt();
+
+    int d = getProduct(b, n1, n2);
+    System.out.println(d);
+ }
+
+public static int getSum(int b, int n1, int n2){
+       // write ur code here
+       
+       int carry = 0;
+       int tp = 1;
+       int sum = 0;
+       
+        while(n1 > 0 || n2 > 0 || carry > 0){
+            int d1 = n1 % 10;
+            n1 = n1 / 10;
+            
+            int d2 = n2 % 10;
+            n2 = n2 / 10;
+            
+            int d = d1 + d2 + carry;
+            carry = d / b;
+            d = d % b;
+            
+            sum = sum + d * tp;
+            
+            tp = tp * 10;
+        }
+        
+        return sum;
+       
+   }
+   
+   public static int getProductWithSingleDigit(int b, int n1 , int d2){
+       int result=0;
+       int carry = 0;
+       int tp = 1;
+       
+       while(n1 > 0 || carry > 0){
+           int d1 = n1 % 10;
+           n1 = n1 / 10;
+           
+            int d = d1 * d2 + carry;
+            carry = d / b;
+            d = d % b;
+            
+            result = result + d * tp;
+            
+            tp = tp * 10;
+       }
+       
+       
+       return result;
+   }
+   
+   
+ public static int getProduct(int b, int n1, int n2){
+     // write your code here 
+     
+    int result = 0;
+    int tp = 1;
+    
+    while(n2 > 0){
+        int d2 = n2 % 10;
+        n2 = n2 / 10;
+        
+        int prod = getProductWithSingleDigit(b, n1, d2);
+        result = getSum(b, result, prod * tp);
+        
+        tp = tp * 10;
+    } 
+     
+    return result;
+     
+ }
+
+}
+            if(a[low] > d){
+          System.out.print(a[low] + "\n" + a[low-1]);
+        } else {
+          System.out.print(a[low] + "\n" + a[low+1]);
+        }
+        } else {
+            System.out.print(a[high] + "\n" + a[low]);
+        }
+        
+        
+    }
+    
+    if(index >=0){
+        System.out.print(a[index]);
+    }
+ }
+
+}

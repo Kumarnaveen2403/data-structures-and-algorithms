@@ -1,0 +1,48 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		
+		System.out.print(getStairPaths(n));
+    }
+
+    public static ArrayList<String> getStairPaths(int n) {
+        if(n == 0){
+			ArrayList<String> s = new ArrayList<>();
+			s.add("");
+			return s;
+		}
+		
+		if(n < 0){
+			ArrayList<String> s = new ArrayList<>();
+			return s;
+		}
+		
+		
+		ArrayList<String> allPaths = new ArrayList<>();
+		
+		ArrayList<String> pathWith1 = getStairPaths(n - 1);	
+		ArrayList<String> pathWith2 = getStairPaths(n - 2);
+		ArrayList<String> pathWith3 = getStairPaths(n - 3);
+		
+		for(String path : pathWith1){
+			allPaths.add("1" + path);
+		}
+
+		for(String path : pathWith2){
+			allPaths.add("2" + path);
+		}
+		
+		for(String path : pathWith3){
+			allPaths.add("3" + path);
+		}
+		
+		return allPaths;
+		
+    }
+
+}

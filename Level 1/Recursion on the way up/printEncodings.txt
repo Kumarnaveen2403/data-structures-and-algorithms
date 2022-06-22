@@ -1,0 +1,45 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+		Scanner scn = new Scanner(System.in);
+		String s = scn.nextLine();
+		
+		printEncodings(s, "");
+    }
+
+    public static void printEncodings(String str, String asf) {
+        if(str.length() == 0){
+			System.out.println(asf);
+			return;
+		}
+		
+		char firstChar = str.charAt(0);
+
+		str = str.substring(1);
+		
+		if(firstChar == '0'){
+			return;
+		}
+		
+		char firstCharEncoding = (char)(firstChar - '0' + 'a' - 1);
+		printEncodings(str, asf + firstCharEncoding);
+		
+		
+		if(str.length() == 0){
+		    return;
+		}
+		char secondChar = str.charAt(0);
+		
+		int firstTwoInt = (firstChar - '0') * 10 + (secondChar - '0') ;
+		
+		if(firstTwoInt <= 26 && firstTwoInt >= 1){
+			char firstTwoCharsEncoding = (char)(firstTwoInt + 'a' - 1);
+			printEncodings(str.substring(1), asf + firstTwoCharsEncoding);
+		}
+    }
+	
+
+}

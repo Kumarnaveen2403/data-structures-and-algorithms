@@ -1,0 +1,35 @@
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+    // write your code here  
+    Scanner scn = new Scanner(System.in);
+    
+    int a = scn.nextInt();
+    int b = scn.nextInt();
+    int c = scn.nextInt();
+    
+    boolean flag = false;
+    int counter = 0;
+    
+    while(counter<3){
+        
+        int x = a*a;
+        int y = b*b + c*c;
+        
+        if( x == y ){
+            flag = true;
+            break;
+        } else {
+            int temp = a;
+            a = b;
+            b = c;
+            c = temp;
+        }
+        counter = counter + 1;
+    }
+    
+    System.out.print(flag);
+   }
+  }

@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.nextLine();
+		System.out.println(gss(str));
+    }
+	
+		//Expectation : gss(abc) -> [..., ..c, .b., .bc, a.., a..c, ab., abc]
+		//Faith : gss(bc) -> [.., .c, b., bc]
+		//Final Output : gss(abc) -> . + gss(bc) , a + gss(bc)
+
+    public static ArrayList<String> gss(String str) {
+        if(str.length() == 0){
+			ArrayList<String> s = new ArrayList<>();
+			s.add("");
+			return s;
+		}
+		
+		//seperate the first char and rest of the chars
+		char firstChar = str.charAt(0);
+		String restChars = str.substring(1);
+		
+		ArrayList<String> result = new ArrayList<>();
+		
+		for(String el : gss(restChars)){
+			result.add(el);
+		}
+		
+		for(String el : gss(restChars)){
+			String temp = firstChar + el;
+			result.add(temp);
+		}
+
+		return result;
+    }
+
+}

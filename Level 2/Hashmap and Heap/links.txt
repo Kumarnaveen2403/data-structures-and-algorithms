@@ -1,0 +1,159 @@
+HashMap and Heaps
+   -- subarray with equal number of 0 and 1
+    https://practice.geeksforgeeks.org/problems/count-subarrays-with-equal-number-of-1s-and-0s-1587115620/1/#
+
+  --  Substring with equal 0 1 and 2	
+    https://practice.geeksforgeeks.org/problems/equal-0-1-and-23208/1/
+
+  --  number of subarrays sum exactly k	
+    https://leetcode.com/problems/subarray-sum-equals-k/submissions/
+
+  --  Subarray sum Divisible by k
+    https://practice.geeksforgeeks.org/problems/sub-array-sum-divisible-by-k2617/1/
+
+    + Longest variations of above 4
+
+  --  Count Pair whose sum is divisible by k
+    https://www.geeksforgeeks.org/count-pairs-in-array-whose-sum-is-divisible-by-k/
+
+  --  X of a kind in a deck	
+    https://leetcode.com/problems/x-of-a-kind-in-a-deck-of-cards/
+
+  --  Rabbits in forest	
+    https://leetcode.com/problems/rabbits-in-forest/
+
+  --  Check AP sequence
+    https://www.geeksforgeeks.org/check-whether-arithmetic-progression-can-formed-given-array/
+
+  --  Array of doubled Pair	
+    https://leetcode.com/problems/array-of-doubled-pairs/
+
+  ..  Same Differences
+    https://codeforces.com/contest/1520/problem/D
+
+  --  Count of distinct elements in window of size k
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-distinct-elements-in-every-window-of-size-k-official/ojquestion
+
+  --  Number Of Employees Under Every Manager
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/number-of-employees-under-every-manager-official/ojquestion
+
+  ..  Longest consecutive sequence of 1's in a binary string
+    https://www.geeksforgeeks.org/maximum-consecutive-ones-or-zeros-in-a-binary-array/
+
+  --  Is Array divisible in pairs whose sum is K
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/check-if-an-array-cab-be-divided-into-pairs-whose-sum-is-divisible-by-k-official/ojquestion
+
+  --  Find All Anagrams - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/find-all-anagrams-in-a-string-official/ojquestion
+  
+  --  K Anagrams - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/k-anagrams-official/ojquestion
+
+  --  Minimum Window Substring
+    https://leetcode.com/problems/minimum-window-substring/
+
+  --  Find Anagram Mappings - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/find-anagram-mappings-official/ojquestion
+
+    Group Anagrams - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-anagrams-official/ojquestion
+
+    Group Shifted Strings - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-shifted-string-official/ojquestion
+
+    Isomorphic Strings - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/isomorphic-strings-official/ojquestion
+    
+    Word Pattern - done
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/word-pattern-official/ojquestion
+
+    Morning Assembly
+    https://practice.geeksforgeeks.org/problems/morning-assembly/0
+
+///////////////////////////////////////////////////////////////////////////////////
+
+-- Isomorphic Strings - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/isomorphic-strings-official/ojquestion
+
+-- Count Of Substrings Having All Unique Characters - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-all-unique-characters-official/ojquestion
+
+-- Find Itinerary - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/find-itinerary-from-tickets-official/ojquestion
+
+Longest substring with non-repeating characters - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-substring-with-unique-characters-official/ojquestion
+
+Longest Substring with exactly K Characters - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-substring-with-exactly-k-unique-characters-official/ojquestion 
+
+Group Anagrams - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-anagrams-official/ojquestion
+
+Group Shifted Strings - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-shifted-string-official/ojquestion
+
+Word Pattern - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/word-pattern-official/ojquestion
+
+Morning Assembly - https://practice.geeksforgeeks.org/problems/morning-assembly/0
+
+Largest Subarray With Continuos Elements - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/largest-subarray-with-contiguous-elements-official/ojquestion
+
+Smallest substring containing all unique characters - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/smallest-substring-of-a-string-containing-all-unique-characters-of-itself-official/ojquestion
+
+///////////////////////////////////////////////////////////////////////////////////
+
+-- Smalllest subarray with all occurences of most frequent element
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/smallest-subarray-with-all-occurrences-of-the-most-frequent-element-official/ojquestion
+
+First Non repeating character 
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/first-non-repeating-character-official/ojquestion
+    https://www.geeksforgeeks.org/given-a-string-find-its-first-non-repeating-character/
+
+-- LRU Cache
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/lru-cache/ojquestion
+    https://leetcode.com/problems/lru-cache/submissions/
+    
+-- Task Completion 
+    https://pepcoding.com/resou rces/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/task-completion-official/ojquestion
+
+-- ? Pairs with given sum in two sorted matrices
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/pairs-with-given-sum-in-two-sorted-matrices-official/ojquestion
+    https://www.geeksforgeeks.org/count-pairs-two-sorted-matrices-given-sum/
+
+Quadruplet Sum1
+    https://pepcoding.`com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/quadruplet-sum-official/ojquestion
+
+Quadruplet Sum2
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/quadruplet-sum-2-official/ojquestion
+
+Powerful Number
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/powerful-number-official/ojquestion
+    https://leetcode.com/problems/powerful-integers/submissions/
+
+Subdomain Visit Count
+    https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/subdomain-visit-count-official/ojquestion
+    https://leetcode.com/problems/subdomain-visit-count/
+
+Largest Subarray With Continuos Elements - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/largest-subarray-with-contiguous-elements-official/ojquestion
+Count of Substring with exactly K Unique characters - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-with-exactly-k-unique-characters-official/ojquestion
+Group Anagrams - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-anagrams-official/ojquestion
+Group Shifted Strings - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/group-shifted-string-official/ojquestion
+Equivalent Subarrays - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/equivalent-subarrays-official/ojquestion
+MCO1 - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/maximum-consecutive-ones-i-official/ojquestion
+MCO2 - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/maximum-consecutive-ones-ii-official/ojquestion
+Longest subtring with <= K unique chars - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/longest-substring-with-at-most-k-unique-characters-official/ojquestion
+Count substring with <= K unique chars - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/count-of-substrings-having-at-most-k-unique-characters-official/ojquestion
+Binary Strings - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/binary-strings-with-substrings-representing-numbers-from-1-to-n-official/ojquestion
+Pairs with equal sum - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/pairs-with-equal-sum-official/ojquestion
+Fraction - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/recurring-sequence-in-a-fraction-official/ojquestion
+
+30 March
+-- brick wall - lc - 554
+-- random pick with blacklist - lc - 710 // map last values
+-- the skyline problem - lc - 218 
+-- pair of non-coiding points - https://practice.geeksforgeeks.org/problems/pairs-of-non-coinciding-points4141/1
+
+31 March
+-- connect sticks - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/minimum-cost-to-connect-sticks/ojquestion
+-- Snapshot array (code in 28 march folder) - https://leetcode.com/problems/snapshot-array/
+-- Tiny url - https://leetcode.com/problems/encode-and-decode-tinyurl/
+Avoid flood (use treeset) - https://leetcode.com/problems/avoid-flood-in-the-city/
+
+1 April
+--- Minimum refuling stops - https://leetcode.com/problems/minimum-number-of-refueling-stops/
+-- Line reflection - https://pepcoding.com/resources/data-structures-and-algorithms-in-java-levelup/hashmap-and-heaps/line-reflection-official/ojquestion
+-- Reorganize String - https://leetcode.com/problems/reorganize-string/
